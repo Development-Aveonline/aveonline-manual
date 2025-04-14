@@ -1,6 +1,6 @@
 {
   "name": "aveonline-manual",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Manual de estilos de Aveonline para instalar desde npm",
   "main": "./cjs/index.js",
   "module": "./cjs/index.js",

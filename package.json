@@ -1,0 +1,19 @@
+{
+  "name": "aveonline-manual",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Development-Aveonline/aveonline-manual.git"
+  },
+  "author": "franciscoblancojn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Development-Aveonline/aveonline-manual/issues"
+  },
+  "homepage": "https://github.com/Development-Aveonline/aveonline-manual#readme"
+}

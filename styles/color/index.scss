@@ -1,7 +1,16 @@
-:root{
-    --ave-white:#fff;
-    --ave-gray :#3d3d3d;
-    --ave-primary :#5F24F1;
-    --ave-secondary :#301279;
-    --ave-active :#bfa7f9;
+:root {
+    --ave-white: #fff;
+    --ave-gray: #3d3d3d;
+    --ave-primary: #5f24f1;
+    --ave-secondary: #301279;
+    --ave-active: #bfa7f9;
+}
+
+@mixin ave_styleTheme_dark {
+    --ave-white: #1a222c;
+    --ave-gray: #d1d1d1;         /* más claro para contrastar con fondo oscuro */
+    --ave-primary: #a78bfa;      /* un violeta más suave y brillante */
+    --ave-secondary: #7b61ff;    /* más claro que el original para destacar */
+    --ave-active: #e0d5ff;       /* mucho más claro para marcar foco o estado activo */
+
 }

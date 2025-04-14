@@ -1,0 +1,65 @@
+:root{
+    --fenext-font-global: 'Inter', system-ui;
+    --fenext-size-menu-top: 3rem;
+    --fenext-size-menu-left-close: 0px;
+    --fenext-size-menu-left-max: max(13rem, 10vw);
+    --fenext-size-menu-left: min(100%, var(--fenext-size-menu-left-max));
+    --fenext-z-index-menu: 100;
+    --fenext-z-index-modal: 2000;
+    --fenext-z-index-select-option: 3000;
+    --fenext-z-index-notification: 30000;
+    --fenext-z-index-google-autocomplete-pac: 40000;
+    --fenext-size-container: 80dvw;
+    --fenext-size-btn-menu: 2rem;
+    --fenext-size-user: 3rem;
+    --fenext-modal-width: max(30vw, min(30rem, 100%));
+    --fenext-modal-height: max(30vh, min(15rem, 100%));
+}
+
+@mixin styleTheme_light {
+    @include generateColor("primary", var(--ave-primary));
+    @include generateColor("secondary", var(--ave-secondary));
+    @include generateColor("success", #43A047);
+    @include generateColor("warning", #FDD835);
+    @include generateColor("danger", #E53935);
+    @include generateColor("light", #F5F5F5);
+    @include generateColor("dark", #212121);
+    @include generateColor("gray", #c9c9c9 );
+    @include generateColor("disabled", #9c9c9c );
+    @include generateColor("white", #fff);
+    @include generateColor("loader-background", #f2f2f2);
+    @include generateColor("loader-foreground", #9c9c9c);
+}
+@mixin styleTheme_dark {
+    @include ave_styleTheme_dark();
+    @include generateColor("primary", var(--ave-primary), "dark");
+    @include generateColor("secondary", var(--ave-secondary), "dark");
+    @include generateColor("success", #66BB6A, "dark");
+    @include generateColor("warning", #FFEB3B, "dark");
+    @include generateColor("danger", #EF5350, "dark");
+    @include generateColor("light", #24303f, "dark");
+    @include generateColor("dark", #FAFAFA, "dark");
+    @include generateColor("gray", #c9c9c9 , "dark");
+    @include generateColor("disabled", #9c9c9c, "dark");
+    @include generateColor("white", #1a222c, "dark");
+    @include generateColor("loader-background", hsl(0, 0%, 35%), "dark");
+    @include generateColor("loader-foreground", hsl(0, 0%, 71%), "dark");
+
+}
+
+:root {
+    @include styleTheme_light();
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not(:has([data-fenext-prefers-color-scheme-disabled])) {
+        @include styleTheme_dark();
+    }
+    
+}
+[fenext-theme="dark"] {
+    @include styleTheme_dark();
+}
+[fenext-theme="light"] {
+    @include styleTheme_light();
+}

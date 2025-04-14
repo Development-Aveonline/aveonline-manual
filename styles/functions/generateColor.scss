@@ -1,0 +1,9 @@
+@mixin generateColor($name, $color, $theme: "light") {
+    --fenext-color-#{$name}: #{$color};
+    @if $theme != "dark" {
+        --fenext-color-theme-light-#{$name}: #{$color};
+    }
+    @if $theme == "dark" {
+        --fenext-color-theme-dark-#{$name}: #{$color};
+    }
+}

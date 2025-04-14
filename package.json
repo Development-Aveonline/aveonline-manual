@@ -4,8 +4,17 @@
   "description": "Manual de estilos de Aveonline para instalar desde npm",
   "main": "index.js",
   "scripts": {
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "echo 'esm'",
+    "build:cjs": "tsc --module commonjs --outDir cjs",
     "sass-min": "sass ./styles/index.scss:./styles/index.css --style compressed",
-    "sass": "sass ./styles/index.scss:./styles/index.css"
+    "sass": "sass ./styles/index.scss:./styles/index.css",
+    "lint": "npx eslint src",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "npx prettier src '!**/*.stories.tsx' --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "format": "npm run prettier:fix && npm run lint:fix",
+    "flb": "npm run format && npm run lint && npm run build && npm run sass-min"
   },
   "repository": {
     "type": "git",
@@ -16,5 +25,23 @@
   "bugs": {
     "url": "https://github.com/Development-Aveonline/aveonline-manual/issues"
   },
-  "homepage": "https://github.com/Development-Aveonline/aveonline-manual#readme"
+  "homepage": "https://github.com/Development-Aveonline/aveonline-manual#readme",
+
+  "files": [
+    "cjs",
+    "esm",
+    "styles/index.css"
+  ],
+  "devDependencies": {
+    "@types/node": "20.12.4",
+    "@typescript-eslint/eslint-plugin": "7.5.0",
+    "@typescript-eslint/parser": "7.5.0",
+    "eslint": "8.57.0",
+    "npm-check-updates": "16.14.18",
+    "prettier": "3.2.5",
+    "sass": "^1.82.0",
+    "ts-loader": "9.5.1",
+    "tslib": "2.6.2",
+    "typescript": "5.4.4"
+  }
 }

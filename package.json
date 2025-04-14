@@ -2,7 +2,9 @@
   "name": "aveonline-manual",
   "version": "1.0.0",
   "description": "Manual de estilos de Aveonline para instalar desde npm",
-  "main": "index.js",
+  "main": "./cjs/index.js",
+  "module": "./cjs/index.js",
+  "types": "./cjs/index.d.ts",
   "scripts": {
     "build": "npm run build:esm && npm run build:cjs",
     "build:esm": "echo 'esm'",

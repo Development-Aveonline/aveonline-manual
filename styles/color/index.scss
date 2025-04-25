@@ -5,6 +5,7 @@
     --ave-primary: #5f24f1;
     --ave-secondary: #301279;
     --ave-active: #bfa7f9;
+    --ave-tag: #DDEAF7;
 }
 
 @mixin ave_styleTheme_dark {
@@ -13,5 +14,6 @@
     --ave-primary: #a78bfa;      /* un violeta más suave y brillante */
     --ave-secondary: #7b61ff;    /* más claro que el original para destacar */
     --ave-active: #e0d5ff;       /* mucho más claro para marcar foco o estado activo */
+    --ave-tag: #DDEAF7;
 
 }

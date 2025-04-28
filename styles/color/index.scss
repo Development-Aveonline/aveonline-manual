@@ -6,6 +6,7 @@
     --ave-secondary: #301279;
     --ave-active: #bfa7f9;
     --ave-tag: #DDEAF7;
+    --ave-warning: #FFF7DA;
 }
 
 @mixin ave_styleTheme_dark {
@@ -15,5 +16,6 @@
     --ave-secondary: #7b61ff;    /* más claro que el original para destacar */
     --ave-active: #e0d5ff;       /* mucho más claro para marcar foco o estado activo */
     --ave-tag: #DDEAF7;
+    --ave-warning: #FFF7DA;
 
 }

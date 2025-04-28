@@ -20,7 +20,7 @@
     @include generateColor("primary", var(--ave-primary));
     @include generateColor("secondary", var(--ave-secondary));
     @include generateColor("success", #43A047);
-    @include generateColor("warning", #FDD835);
+    @include generateColor("warning", var(--ave-warning));
     @include generateColor("danger", #E53935);
     @include generateColor("light", #F5F5F5);
     @include generateColor("dark", #212121);
